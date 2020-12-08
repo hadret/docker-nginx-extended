@@ -1,7 +1,7 @@
 # vim:set ft=dockerfile:
 FROM  ubuntu:focal
+LABEL maintainer="Filip Chabik <hadret@hey.com>"
 
-LABEL maintainer="Filip Chabik <hadret@gmail.com>"
 
 RUN set -x \
     && apt-get update \
