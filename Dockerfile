@@ -1,5 +1,5 @@
 # vim:set ft=dockerfile:
-FROM ubuntu:bionic
+FROM  ubuntu:focal
 
 LABEL maintainer="Filip Chabik <hadret@gmail.com>"
 
