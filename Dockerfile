@@ -2,6 +2,7 @@
 FROM  ubuntu:focal
 LABEL maintainer="Filip Chabik <hadret@hey.com>"
 
+ARG nginx_version=1.18.0-0+focal4
 
 RUN set -x \
     && apt-get update \
@@ -9,7 +10,7 @@ RUN set -x \
                                              software-properties-common \
     && add-apt-repository ppa:hadret/nginx \
     && apt-get update \
-    && apt-get install -y nginx-full \
+    && apt-get install -y nginx-full=$nginx_version \
     && apt-get remove -y --purge --auto-remove apt-transport-https \
                                                    ca-certificates \
     && rm -rf /var/lib/apt/lists/*
