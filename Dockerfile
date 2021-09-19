@@ -13,6 +13,7 @@ RUN set -x \
     && apt-get install -y nginx-full=$nginx_version \
     && apt-get remove -y --purge --auto-remove apt-transport-https \
                                                    ca-certificates \
+                                        software-properties-common \
     && rm -rf /var/lib/apt/lists/*
 
 RUN ln -sf /dev/stdout /var/log/nginx/access.log \
