@@ -10,7 +10,7 @@ RUN set -x \
                                              software-properties-common \
     && add-apt-repository ppa:hadret/nginx \
     && apt-get update \
-    && apt-get install -y nginx-full=$nginx_version \
+    && apt-get install -y nginx-extras=$nginx_version \
     && apt-get remove -y --purge --auto-remove apt-transport-https \
                                                    ca-certificates \
                                         software-properties-common \
