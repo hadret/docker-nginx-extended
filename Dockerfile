@@ -2,13 +2,13 @@
 FROM  ubuntu:focal
 LABEL maintainer="Filip Chabik <hadret@hey.com>"
 
-ARG nginx_version=1.20.1-0+focal4
+ARG nginx_version=1.21.4-0+focal1
 
 RUN set -x \
     && apt-get update \
     && apt-get install -y --no-install-recommends --no-install-suggests \
                                              software-properties-common \
-    && add-apt-repository ppa:hadret/nginx \
+    && add-apt-repository ppa:hadret/nginx-mainline \
     && apt-get update \
     && apt-get install -y nginx-extras=$nginx_version \
     && apt-get remove -y --purge --auto-remove apt-transport-https \
