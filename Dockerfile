@@ -2,7 +2,7 @@
 FROM  ubuntu:focal
 LABEL maintainer="Filip Chabik <hadret@hey.com>"
 
-ARG nginx_version=1.20.1-0+focal4
+ARG nginx_version=1.20.2-0+focal1
 
 RUN set -x \
     && apt-get update \
