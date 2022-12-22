@@ -1,8 +1,8 @@
 # vim:set ft=dockerfile:
 FROM  ubuntu:focal
-LABEL maintainer="Filip Chabik <hadret@hey.com>"
+LABEL maintainer="Filip Chabik <hadret@gmail.com>"
 
-ARG nginx_version=1.22.0-0+focal1
+ARG nginx_version=1.22.1-0+focal1
 
 RUN set -x \
     && apt-get update \
